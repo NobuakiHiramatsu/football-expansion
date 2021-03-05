@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+h3 {
+    color:red;
+}
+
+header {
+    background-color:rgba(204,204,204,0.8);
+    width:100%;
+    z-index:100;
+    position:fixed;
+}
+
+.nav-link, .navbar-brand {
+    color:black;
+}
+
+
+
+#main {
+    padding:60px 1.5rem 1.5rem 1.5rem;
+}
