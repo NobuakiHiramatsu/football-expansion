@@ -3,7 +3,72 @@
 @section('content')
     @if (Auth::check())
     {{--ログインできている場合--}}
-        {{ Auth::user()->name }}
+        <div id="main">
+            <h3>順位表</h3>
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="#PL_results" class="nav-link active" data-toggle="tab">プレミアリーグ</a></li>
+                <li class="nav-item"><a href="#PD_results" class="nav-link" data-toggle="tab">ラ・リーガ</a></li>
+                <li class="nav-item"><a href="#SA_results" class="nav-link" data-toggle="tab">セリエA</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="PL_results" class="tab-pane active">
+                    <table class="table">
+                        <tr>
+                            <th class="text-center">順位</th>
+                            <th class="text-center">クラブ</th>
+                            <th class="text-center">Match</th>
+                            <th class="text-center">W</th>
+                            <th class="text-center">L</th>
+                            <th class="text-center">D</th>
+                            <th class="text-center">Points</th>
+                        </tr>
+                        <tbody class="PL_table">
+    
+                        </tbody>
+                    </table>
+                </div>    
+    
+                
+                <div id="PD_results" class="tab-pane">
+                    <table class="table">
+                        <tr>
+                            <th class="text-center">順位</th>
+                            <th class="text-center">クラブ</th>
+                            <th class="text-center">Match</th>
+                            <th class="text-center">W</th>
+                            <th class="text-center">L</th>
+                            <th class="text-center">D</th>
+                            <th class="text-center">Points</th>
+                        </tr>
+                        <tbody class="PD_table">
+    
+                        </tbody>
+                    </table>
+                </div>    
+    
+                
+                <div id="SA_results" class="tab-pane">
+                    <table class="table">
+                        <tr>
+                            <th class="text-center">順位</th>
+                            <th class="text-center">クラブ</th>
+                            <th class="text-center">Match</th>
+                            <th class="text-center">W</th>
+                            <th class="text-center">L</th>
+                            <th class="text-center">D</th>
+                            <th class="text-center">Points</th>
+                        </tr>
+                        <tbody class="SA_table">
+    
+                        </tbody>
+                    </table>
+                </div>   
+                
+            </div>
+        </div>
+        @section('script')
+            <script src="{{ asset('/js/result.js') }}"></script>
+        @endsection
     @else
     {{--ログインできていない場合--}}
         <div class="text-center mt-4">

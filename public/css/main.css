@@ -20,3 +20,10 @@ header {
 #main {
     padding:60px 1.5rem 1.5rem 1.5rem;
 }
+
+.PL_setsu, .PD_setsu, .SA_setsu {
+    width:100%;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    flex-wrap:nowrap;
+}
