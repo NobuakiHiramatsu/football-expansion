@@ -7,9 +7,9 @@
         <div class="collapse navbar-collapse justify-content-end" id="nav-bar">
             <ul class="navbar-nav">
                 {{-- ユーザ登録のリンク--}}
-                <li class="nav-item"><a href="" class="nav-link font-weight-bold" data-toggle="collapse" data-target=".navbar-collapse.show">ユーザー登録</a></li>
+                <li>{!! link_to_route('signup.get', 'Signup', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
                 {{-- ログインのリンク　--}}
-                <li class="nav-item"><a href="" class="nav-link font-weight-bold" data-toggle="collapse" data-target=".navbar-collapse.show">ログイン</a></li>
+                <li class="nav-item"><a href="" class="nav-link font-weight-bold" data-toggle="collapse" data-target=".navbar-collapse.show">Login</a></li>
             </ul>
         </div>
     </nav>
