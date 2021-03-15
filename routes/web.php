@@ -27,3 +27,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::get('schedule', function () {
     return view('schedule');
 })->name('schedule');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('users', 'UsersController@index')->name('myprofile');
+});

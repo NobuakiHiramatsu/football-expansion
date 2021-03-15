@@ -61,13 +61,6 @@ for(let i = 0; i < numbers.length; i++){
     )
 }
 
-//画面サイズ取得
-/*$(function(){
-    $(window).on('load resize',function(){
-        let w_width = $(window).width();
-    });
-}) */
-
 //プレミアリーグの表示
 $("#PL_click").click(function(){
     $(function(){
