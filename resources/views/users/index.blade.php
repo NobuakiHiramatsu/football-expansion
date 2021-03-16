@@ -12,14 +12,18 @@
         {{ $user -> email}}
     </div>
     <div>
-        <label for="favorite">favorite team:</label>
+        <label for="favorite">favorite team:<span class="your_team"></span></label>
         @if ($favorite)
-
-            {{ $favorite -> team_id}}
             {{-- ここにお気に入りチームの削除ボタンと未設定なら登録ボタン　--}}
             {!! Form::open(['route' => ['favorites.destroy', $favorite->id], 'method' => 'delete']) !!}
                 {!! Form::submit('お気に入りチーム変更', ['class' => 'btn btn-danger btn-sm']) !!}
             {!! Form::close() !!}
+            <script>
+                window.js_team= @json($favorite); 
+            </script> 
+            @section('script')
+                <script src="{{ asset('/js/myprofile.js') }}"></script>
+            @endsection
         @else
             <div id="main">
                 <p class="topic"><img src="image/icons8-soccer-ball-64.png" alt="soccerball">チーム選択</p>
@@ -284,6 +288,5 @@
                 {!! Form::close() !!}
             </div>
         @endif
-            
     </div>
 @endsection
