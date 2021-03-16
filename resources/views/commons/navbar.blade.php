@@ -10,7 +10,9 @@
                 {{-- ログイン済みの場合の表示　--}}
                     <li class="nav-item">{!! link_to_route('welcome', 'Results', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
                     <li class="nav-item">{!! link_to_route('schedule', 'Schedule', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
+                    <li class="nav-item">{!! link_to_route('favorites.index', 'Favorite', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
                     <li class="nav-item">{!! link_to_route('myprofile', 'Myprofile', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
+                    
                     {{--　ログアウトのリンク　--}}
                     <li class="nav-item">{!! link_to_route('logout.get', 'Logout', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
                 @else

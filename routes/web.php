@@ -30,4 +30,6 @@ Route::get('schedule', function () {
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('users', 'UsersController@index')->name('myprofile');
+
+    Route::resource('favorites', 'FavoritesController',['only'=> ['index','store', 'destroy']]);
 });
