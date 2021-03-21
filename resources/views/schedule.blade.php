@@ -1,9 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (Auth::check())
-        <div id="main">
-            <h3>試合日程</h3>
+    <div id="main">
+        @if (Auth::check())
+        
+            <p class="topic"><img src="image/icons8-soccer-ball-64.png" alt="soccerball">試合日程</p>
             <ul class="nav nav-tabs">
                 <li class="nav-item"><a href="#PL_sche" id ="PL_click" class="nav-link active" data-toggle="tab">プレミアリーグ</a></li>
                 <li class="nav-item"><a href="#PD_sche" id ="PD_click" class="nav-link" data-toggle="tab">ラ・リーガ</a></li>
@@ -38,13 +39,13 @@
 
                     </div>
                 </div>   
-                
+            
             </div>
-        </div>
-        @section('script')
-            <script src="{{ asset('/js/schedule.js') }}"></script>
-        @endsection
-    @else
-        {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-md btn-primary']) !!}
-    @endif
+            @section('script')
+                <script src="{{ asset('/js/schedule.js') }}"></script>
+            @endsection
+        @else
+            {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-md btn-primary']) !!}
+        @endif
+    </div>
 @endsection

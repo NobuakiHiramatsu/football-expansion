@@ -1,71 +1,73 @@
 @extends('layouts.app')
 
 @section('content')
+<div id="main">
     @if (Auth::check())
     {{--ログインできている場合--}}
-        <div id="main">
-            <h3>順位表</h3>
-            <ul class="nav nav-tabs">
-                <li class="nav-item"><a href="#PL_results" class="nav-link active" data-toggle="tab">プレミアリーグ</a></li>
-                <li class="nav-item"><a href="#PD_results" class="nav-link" data-toggle="tab">ラ・リーガ</a></li>
-                <li class="nav-item"><a href="#SA_results" class="nav-link" data-toggle="tab">セリエA</a></li>
-            </ul>
-            <div class="tab-content">
-                <div id="PL_results" class="tab-pane active">
-                    <table class="table">
-                        <tr>
-                            <th class="text-center">順位</th>
-                            <th class="text-center">クラブ</th>
-                            <th class="text-center">Match</th>
-                            <th class="text-center">W</th>
-                            <th class="text-center">L</th>
-                            <th class="text-center">D</th>
-                            <th class="text-center">Points</th>
-                        </tr>
-                        <tbody class="PL_table">
-    
-                        </tbody>
-                    </table>
-                </div>    
-    
-                
-                <div id="PD_results" class="tab-pane">
-                    <table class="table">
-                        <tr>
-                            <th class="text-center">順位</th>
-                            <th class="text-center">クラブ</th>
-                            <th class="text-center">Match</th>
-                            <th class="text-center">W</th>
-                            <th class="text-center">L</th>
-                            <th class="text-center">D</th>
-                            <th class="text-center">Points</th>
-                        </tr>
-                        <tbody class="PD_table">
-    
-                        </tbody>
-                    </table>
-                </div>    
-    
-                
-                <div id="SA_results" class="tab-pane">
-                    <table class="table">
-                        <tr>
-                            <th class="text-center">順位</th>
-                            <th class="text-center">クラブ</th>
-                            <th class="text-center">Match</th>
-                            <th class="text-center">W</th>
-                            <th class="text-center">L</th>
-                            <th class="text-center">D</th>
-                            <th class="text-center">Points</th>
-                        </tr>
-                        <tbody class="SA_table">
-    
-                        </tbody>
-                    </table>
-                </div>   
-                
-            </div>
+        <p class="topic"><img src="image/icons8-soccer-ball-64.png" alt="soccerball">順位表</p>
+        <ul class="nav nav-tabs">
+            <li class="nav-item"><a href="#PL_results" class="font nav-link active" data-toggle="tab">プレミアリーグ</a></li>
+            <li class="nav-item"><a href="#PD_results" class="font nav-link" data-toggle="tab">ラ・リーガ</a></li>
+            <li class="nav-item"><a href="#SA_results" class="font nav-link" data-toggle="tab">セリエA</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="PL_results" class="tab-pane active">
+                <table class="table">
+                    <tr>
+                        <th class="text-center">Rank</th>
+                        <th class="text-center"></th>
+                        <th class="text-left">Club</th>
+                        <th class="text-center">Match</th>
+                        <th class="text-center">W</th>
+                        <th class="text-center">D</th>
+                        <th class="text-center">L</th>
+                        <th class="text-center">Points</th>
+                    </tr>
+                    <tbody class="PL_table">
+
+                    </tbody>
+                </table>
+            </div>    
+
+            
+            <div id="PD_results" class="tab-pane">
+                <table class="table">
+                    <tr>
+                        <th class="text-center">Rank</th>
+                        <th class="text-center"></th>
+                        <th class="text-left">Club</th>
+                        <th class="text-center">Match</th>
+                        <th class="text-center">W</th>
+                        <th class="text-center">L</th>
+                        <th class="text-center">D</th>
+                        <th class="text-center">Points</th>
+                    </tr>
+                    <tbody class="PD_table">
+
+                    </tbody>
+                </table>
+            </div>    
+
+            
+            <div id="SA_results" class="tab-pane">
+                <table class="table">
+                    <tr>
+                        <th class="text-center">Rank</th>
+                        <th class="text-center"></th>
+                        <th class="text-left">Club</th>
+                        <th class="text-center">Match</th>
+                        <th class="text-center">W</th>
+                        <th class="text-center">L</th>
+                        <th class="text-center">D</th>
+                        <th class="text-center">Points</th>
+                    </tr>
+                    <tbody class="SA_table">
+
+                    </tbody>
+                </table>
+            </div>   
         </div>
+    
         @section('script')
             <script src="{{ asset('/js/result.js') }}"></script>
         @endsection
@@ -81,4 +83,5 @@
             {!! link_to_route('signup.get', 'Sign up now!', [], ['class' => 'btn btn-md btn-primary']) !!}
         </div>
     @endif
+</div>
 @endsection

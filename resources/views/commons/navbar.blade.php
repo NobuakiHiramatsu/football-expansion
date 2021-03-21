@@ -1,10 +1,9 @@
 <header>
-    <nav class="navbar navbar-expand-md">
-        <a href="/" class="navbar-brand font-weight-bold">Football Expansion</a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-bar" aria-controls="nav-bar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="nav-bar">
+    <div class="head">
+        <a href="/welcome" class="logo text-center font-weight-bold">Football Expansion</a>
+    </div>
+    <nav class="navbar navbar-expand">
+        <div class="collapse navbar-collapse justify-content-center">
             <ul class="navbar-nav">
                 @if (Auth::check())
                 {{-- ログイン済みの場合の表示　--}}
@@ -22,6 +21,7 @@
                     {{-- ログインのリンク　--}}
                     <li class="nav-item">{!! link_to_route('login', 'Login', [], ['class' => 'nav-link font-weight-bold']) !!}</li>
                 @endif    
+                
             </ul>
         </div>
     </nav>

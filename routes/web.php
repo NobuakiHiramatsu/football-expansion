@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('welcome');
-})->name('welcome');
+});
 
 /* ユーザー登録のルーター　*/
 Route::get('signup', 'Auth\RegisterController@showRegistrationForm')->name('signup.get');
@@ -27,6 +27,10 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::get('schedule', function () {
     return view('schedule');
 })->name('schedule');
+
+Route::get('welcome', function () {
+    return view('welcome');
+})->name('welcome');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('users', 'UsersController@index')->name('myprofile');

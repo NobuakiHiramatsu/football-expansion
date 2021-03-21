@@ -12,7 +12,8 @@ $(function() {
             $(".PL_table").append(
                 `<tr>
                 <td class="text-center">${standing.position}</td>
-                <td class="text-left"><img src="${standing.team.crestUrl}" height="24">${standing.team.name}</td> 
+                <td class="text-center"><img src="${standing.team.crestUrl}" height="24"></td>
+                <td class="text-left">${standing.team.name}</td> 
                 <td class="text-center">${standing.playedGames}</td>
                 <td class="text-center">${standing.won}</td>
                 <td class="text-center">${standing.draw}</td>
@@ -32,7 +33,8 @@ $(function() {
             $(".PD_table").append(
                 `<tr>
                 <td class="text-center">${standing.position}</td>
-                <td class="text-left"><img src="${standing.team.crestUrl}" height="24">${standing.team.name}</td> 
+                <td class="text-center"><img src="${standing.team.crestUrl}" height="24"></td>
+                <td class="text-left">${standing.team.name}</td> 
                 <td class="text-center">${standing.playedGames}</td>
                 <td class="text-center">${standing.won}</td>
                 <td class="text-center">${standing.draw}</td>
@@ -52,7 +54,8 @@ $(function() {
             $(".SA_table").append(
                 `<tr>
                 <td class="text-center">${standing.position}</td>
-                <td class="text-left"><img src="${standing.team.crestUrl}" height="24">${standing.team.name}</td> 
+                <td class="text-center"><img src="${standing.team.crestUrl}" height="24"></td>
+                <td class="text-left">${standing.team.name}</td> 
                 <td class="text-center">${standing.playedGames}</td>
                 <td class="text-center">${standing.won}</td>
                 <td class="text-center">${standing.draw}</td>
